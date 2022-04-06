@@ -8,3 +8,5 @@ class ListNode(object):
 class LinkList(object):
     def __init__(self, node=None):
         self._head = node
+
+    def
