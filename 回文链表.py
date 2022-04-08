@@ -9,4 +9,6 @@ class LinkList(object):
     def __init__(self, node=None):
         self._head = node
 
-    def
+    def __del__(self):
+
+    def __index__(self):
