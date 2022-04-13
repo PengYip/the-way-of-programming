@@ -55,3 +55,7 @@ if __name__ == "__main__":
     ll.append(98)
     ll.append(97)
     ll.travel()
+
+    def __del__(self):
+
+    def __index__(self):
