@@ -2,6 +2,8 @@ import randomint
 import random
 from cal_time import *
 import sys
+import copy
+from bubble_sort import *
 
 sys.setrecursionlimit(100000)
 
@@ -34,8 +36,10 @@ def quick_sort(li):
     _quick_sort(li, 0, len(li) - 1)
 
 
-li = list(range(1000))
+li = list(range(10000))
 random.shuffle(li)
+li1 = copy.deepcopy(li)
+li2 = copy.deepcopy(li)
 
-quick_sort(li)
-print(li)
+quick_sort(li1)
+bubble_sort(li2)
