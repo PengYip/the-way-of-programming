@@ -7,7 +7,6 @@ def cal_time(func):
         start = time.perf_counter()
         func(*args,**kwargs)
         ti = time.perf_counter() - start
-        print(func)
+        print(func.__name__)
         print(ti)
-        return func(*args, **kwargs)
     return wrapper
