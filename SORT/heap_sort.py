@@ -1,5 +1,6 @@
 import random
-
+from cal_time import *
+import heapq
 
 def sift(li, low, high):
     """
@@ -25,7 +26,7 @@ def sift(li, low, high):
     else:
         li[i] = tmp
 
-
+@cal_time
 def heap_sort(li):
     """
     建堆
@@ -41,8 +42,8 @@ def heap_sort(li):
         sift(li, 0, i - 1)
 
 
-li = list(range(1000))
+li = list(range(10000))
 random.shuffle(li)
-print(li)
-heap_sort(li)
-print(li)
+heapq.heapify(li)
+heapq.heappop(li)
+

@@ -5,7 +5,7 @@ import sys
 import copy
 from bubble_sort import *
 
-sys.setrecursionlimit(100000)
+sys.setrecursionlimit(100000)  # 递归层数设定
 
 
 def partition(li, left, right):
