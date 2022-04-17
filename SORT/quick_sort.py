@@ -4,7 +4,13 @@ from cal_time import *
 import sys
 import copy
 from bubble_sort import *
-
+"""
+快速排序有左右指针
+1.比选定元素大的放到右指针
+2.比选定元素小的放到左指针
+3.左右指针重合时元素放到指针处
+4.对左右两部分递归
+"""
 sys.setrecursionlimit(100000)  # 递归层数设定
 
 
@@ -30,16 +36,6 @@ def _quick_sort(li, left, right):
         _quick_sort(li, mid + 1, right)
 
 
-@cal_time
 def quick_sort(li):
     """计时器装饰后的快速排序"""
     _quick_sort(li, 0, len(li) - 1)
-
-
-li = list(range(10000))
-random.shuffle(li)
-li1 = copy.deepcopy(li)
-li2 = copy.deepcopy(li)
-
-quick_sort(li1)
-bubble_sort(li2)
